@@ -34,7 +34,7 @@ app.use(fileUpload({
 
 app.get('/', (req,res) => {
   res.json({
-    message: "Get DRUGSTORES funcionando"
+    message: "GET DRUGSTORES funcionando"
   })
 })
 
