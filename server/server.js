@@ -105,15 +105,14 @@ const Producto = require('./modelos/productos')
 app.post('/crearproducto', async(req,res) => {
 
   try {
-    const { nombre, descripcion, precio} = req.body
+    const { nombre, categoria, precio} = req.body
     
     const crearProducto = new Producto({
       nombre,
-      descripcion,
+      categoria,
       precio
     }
     )
-
     if (req.files.image) {
       const result = await uploadImage(req.files.image.tempFilePath)
       crearProducto.image = {
@@ -124,8 +123,7 @@ app.post('/crearproducto', async(req,res) => {
     }
 
   await crearProducto.save() 
-  
-    // res.end(data) 
+
     res.status(200).json(crearProducto)
   } catch (error) {
     res.status(error.code || 500).json({message:error.message})
@@ -134,11 +132,11 @@ app.post('/crearproducto', async(req,res) => {
 
 
 app.put('/modificarproducto', async (req,res) => {
-  const { id, nombre, descripcion, precio } = req.body
+  const { _id, nombre, categoria, precio } = req.body
   try {
-    const modificarProducto = await Producto.findByIdAndUpdate(id, {
+    const modificarProducto = await Producto.findByIdAndUpdate(_id, {
       nombre,
-      descripcion, 
+      categoria, 
       precio 
     })
     res.json({

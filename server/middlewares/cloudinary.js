@@ -15,7 +15,7 @@ cloudinary.config({
 
 async function uploadImage (filePath) {
   return await cloudinary.v2.uploader.upload(filePath, {
-    folder: 'LaQuiaquenaHerboristeria'
+    folder: 'LaQuiaquenaDrugstores'
   })
 }
 

@@ -6,7 +6,7 @@ const producto = new Schema ({
     type: String,
     required: [true, "El nombre de usuario es necesario"]
   },
-  descripcion: {
+  categoria: {
     type: String,
     required: [true, "La descripción es necesaria"]
   },
