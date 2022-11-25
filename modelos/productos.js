@@ -11,14 +11,14 @@ const producto = new Schema ({
     type: String,
     required: [true, "La descripción es necesaria"]
   },
-  precio: {
-    type: Number,
-    required: [true, "El precio es necesario"]
-  },
   image: {
     public_id: String,
     secure_url: String
-  }
+  },
+  precio: {
+    type: Number,
+    required: [true, "La descripción es necesaria"]
+  },
 })
 
 module.exports = mongoose.model('Producto', producto)
