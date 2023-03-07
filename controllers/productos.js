@@ -39,21 +39,21 @@ const crearProducto = async(req,res) => {
 }
 
 
-// const modificarProducto = async (req,res) => {
-//   const { id, nombre, categoria, precio } = req.body
-//   try {
-//     const modificarProducto = await Producto.findByIdAndUpdate(id, {
-//       nombre,
-//       categoria, 
-//       precio 
-//     })
-//     res.json({
-//       message: `PRODUCTO ${modificarProducto.nombre} modificado correctamente`
-//     })
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
+const modificarProducto = async (req,res) => {
+  const { _id, nombre, categoria, precio } = req.body
+  try {
+    const modificarProducto = await Producto.findByIdAndUpdate(_id, {
+      nombre,
+      categoria,
+      precio 
+    })
+    res.json({
+      message: `PRODUCTO ${modificarProducto.nombre} modificado correctamente`
+    })
+  } catch (error) {
+    res.status(error.code || 500).json({ message: error.message });
+  }
+}
 
 const eliminarProducto = async (req,res) => {
   const {_id } = req.params
@@ -72,4 +72,4 @@ const eliminarProducto = async (req,res) => {
   }
 }
 
-module.exports = { traerProductos, crearProducto , eliminarProducto }
+module.exports = { traerProductos, crearProducto, modificarProducto, eliminarProducto }

@@ -12,7 +12,7 @@
     "mongoose": "^6.5.2",
     "nodemon": "^2.0.20"
   },
-  "name": "laquiaquena-herboristeria-be",
+  "name": "laquiaquena-drugstores-be",
   "version": "1.0.0",
   "main": "./server/server.js",
   "scripts": {
@@ -23,13 +23,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MCeciliaLuna/laquiaquena-herboristeria-be.git"
+    "url": "git+https://github.com/MCeciliaLuna/laquiaquena-drugstores-be.git"
   },
   "author": "María Cecilia Luna",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MCeciliaLuna/laquiaquena-herboristeria-be/issues"
+    "url": "https://github.com/MCeciliaLuna/laquiaquena-drugstores-be/issues"
   },
-  "homepage": "https://github.com/MCeciliaLuna/laquiaquena-herboristeria-be#readme",
-  "description": "Base de datos de página LQ Herboristería"
+  "homepage": "https://github.com/MCeciliaLuna/laquiaquena-drugstores-be#readme",
+  "description": "Base de datos de página LQ Drugstores"
 }
