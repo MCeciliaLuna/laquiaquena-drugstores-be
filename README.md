@@ -1,5 +1,5 @@
 ## LA QUIAQUEÑA DRUGSTORES DATABASE 💻📲
-# 🌿
+# 🍬
 
 En este repositorio se encuentra alojado el código perteneciente a la **base de datos de La Quiaqueña Drugstores Web**, la cual comprende una **e-Commerce web** que permite *loguearse y hacer pedidos* a la empresa. También tiene una sección perteneciente a los *administradores, donde gestionan los productos, los usuarios y los pedidos que reciben*. La database hace posible todo esto.
 
